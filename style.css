@@ -15,8 +15,9 @@
 }
 
 header{
-    background: black;
+    background: rgb(0, 0, 0);
     padding: 7px 10%;
+    position: relative;
 }
 
 nav{
@@ -85,7 +86,7 @@ main {
     justify-content: space-between;
     width: 100%;
     height: 130vh;
-    background: black;
+    background: rgb(0, 0, 0);
     padding: 0 5%;
     flex-wrap: wrap; /* Позволява преминаване на елементи на нов ред */
 }
@@ -106,16 +107,13 @@ main {
     flex: 1;
     min-width: 300px;
     padding: 10px 5%;
-    order: 1; /* На големи екрани остава вляво */
 }
 
 /* Контейнер за изображението */
 .image-container {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* На големи екрани държи изображението вдясно */
     min-width: 300px; /* Когато няма място, ще се премести отдолу */
-    order: 2; /* На големи екрани остава вдясно */
 }
 
 /* Снимката автоматично променя размера си */
@@ -141,4 +139,22 @@ main p{
     color: white;
     font-size: 20px;
     position: absolute;
+}
+
+.main-line1{
+    width: 350px;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    bottom: 30px;
+    right: 50px;
+}
+
+.main-line2{
+    width: 350px;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    top: 50px;
+    right: 50px;
 }
