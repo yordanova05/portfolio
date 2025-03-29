@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700');
+
 @font-face {
     font-family: "CormorantSC-Medium";
     font-weight: normal;
     font-style: normal;
     src: url("fonts/CormorantSC-Medium.ttf") format("truetype");
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700');
 
 *{
     margin: 0px;
@@ -77,6 +77,24 @@ nav ul li a::after{
 
 nav ul li a:hover::after {
     width: 100%; 
+}
+
+/* Показване на менюто при активиране на класа 'show' */
+#menu-list.show {
+    display: block;
+    animation: slideDown 0.1s ease-in-out;
+}
+
+#menu-btn{
+    background: rgb(216, 183, 246);
+    color:white;
+    border-color: black;
+    border-width: 3px;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 15%;
+    display: none;
+    position: relative;
 }
 
 
@@ -158,3 +176,50 @@ main p{
     top: 50px;
     right: 50px;
 }
+
+
+@media screen and (max-width: 768px){
+    #menu-btn{
+        display: block;
+        margin-right: 30px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    header{
+        padding: 7px 10% 30px 10%;
+    }
+
+    .container-main{
+        padding: 0;
+    }
+
+    #menu-list {
+        display: none;
+        position: absolute;
+        top: 50px;  /* разстояние от бутона */
+        left: 50%;  /* Центрираме менюто спрямо бутона */
+        transform: translateX(0%); /* Премества менюто, за да бъде напълно центрирано */
+        background-color: rgba(0, 0, 0, 0.9);  /* Черен фон с прозрачност */
+        width: 200px;  /* Ширина на падащото меню */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1; /* За да е над другите елементи */
+    }
+    
+    #menu-list li {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    #menu-list li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        display: block;
+    }
+}
+
