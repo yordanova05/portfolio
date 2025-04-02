@@ -270,14 +270,84 @@ main p{
     display: block;
 }
 
+/* SERVICES */
+
+#services{
+    height: auto;
+    width: 100%;
+    background-color: black;
+    margin-top: 40px;
+}
+
+.sub-title{
+    width: 100%;
+    height: 60px;
+}
+
+.sub-titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.sub-titles i{
+    font-size: 40px;
+    color:rgb(170, 170, 170);
+}
+.sub-titles h2{
+    color: rgb(216, 183, 246);
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'CormorantSC-Medium', serif;
+}
+
+.sub-titles p{
+    padding-top: 10px;
+}
+
+.service{
+    padding: 20px;
+    background-color: rgba(133, 131, 131, 0.247);
+    box-shadow: 3px 3px 5px rgba(94, 91, 91, 0.6);
+    width: 30% ;
+    height: auto;
+    position: relative;
+    transition: background 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.service:hover{
+    background: rgb(33, 0, 71);
+    transform:translateY(-10px)
+}
 
 
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 790px){
     #menu-btn{
         display: block;
         margin-right: 30px;
+    }
+
+    .name{
+        font-size:25px;
+    }
+
+    main h1{
+        width: 200px;
+        font-size: 40px;
+        height: auto;
+    }
+
+    .image-container{
+        justify-content: center;
+    }
+
+    .image-container img {
+        max-width: 400px;
     }
 
     nav ul{
@@ -290,6 +360,16 @@ main p{
 
     .container-main{
         padding: 0;
+    }
+
+    .main-line1{
+        bottom: 20px;
+        right: 30px;
+    }
+    
+    .main-line2{
+        top: 30px;
+        right: 30px;
     }
 
     #menu-list {
@@ -317,8 +397,26 @@ main p{
     }
 }
 
-@media screen and (max-width: 985px){
+@media screen and (max-width: 1000px){
     .container-about{
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 908px){
+    .sub-titles{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service{
+        min-width: 70%;
+    }
+
+    .sub-titles{
+        align-items: center;
+        
+    }
+}
+
