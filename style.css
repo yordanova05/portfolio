@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: black;
     display: flex;
@@ -138,7 +142,7 @@ main {
 
 .image-container img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
     object-fit: cover;
 }
@@ -183,7 +187,7 @@ main p{
     background-color: black;
     width: 100%;
     height: auto;
-    margin-top: 60px;
+    margin: 60px 0;
 }
 .container-about{
     display: flex;
@@ -278,12 +282,20 @@ main p{
     height: auto;
     width: 100%;
     background-color: black;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .sub-title{
     width: 100%;
     height: 60px;
+}
+
+.container-services hr{
+    width: 120px;
+    border: none;
+    height: 5px;
+    background-color: rgb(216, 183, 246);
+    border-radius: 10px;
 }
 
 .sub-titles{
@@ -332,6 +344,14 @@ main p{
     margin: 70px 0;
     width: 100%;
     height: auto;
+}
+
+.container-project hr{
+    width: 120px;
+    border: none;
+    height: 5px;
+    background-color: rgb(216, 183, 246);
+    border-radius: 10px;
 }
 
 .project-title{
@@ -405,6 +425,117 @@ main p{
 
 .project:hover .layer{
     height: 100%;
+}
+
+/* Contact me */
+
+footer .container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-left{
+    flex-basis: 30%;
+}
+
+.contact-right{
+    flex-basis: 50%;
+}
+
+.contact-left h1{
+    font-size: 50px;
+    color: rgb(216, 183, 246);
+    font-family: 'CormorantSC-Medium', serif;
+}
+
+.contact-left p{
+    font-size: 20px;
+    color: white;
+    margin: 30px 0;
+}
+
+.contact-left p i{
+    color:rgb(216, 183, 246);
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.social-icons{
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.social-icons a{
+    display: inline-block;
+    margin-right: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn.btn2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:rgb(66, 20, 109);
+    color: rgb(216, 183, 246);
+    text-decoration: none;
+    margin: 30px 0;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 7px 0;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #fff;
+    border:0;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0;
+}
+
+.copyright{
+    color: #fff;
+    background-color: #262626;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.copyright i{
+    color: rgb(216, 183, 246);
+}
+  
+.btn:hover {
+    color: rgb(66, 20, 109);
+    background-color: rgb(216, 183, 246);
+}
+
+.social-icons a:hover{
+    color:rgb(216, 183, 246);
+    transform: translateY(-10px);
+}
+
+.contact-inputs:focus{
+    border: 1px solid rgb(216, 183, 246); 
 }
 
 
@@ -493,6 +624,10 @@ main p{
         gap: 20px;
     }
 
+    .contact-left h1{
+        font-size: 40px;
+    }
+
     .service{
         min-width: 70%;
     }
@@ -503,3 +638,21 @@ main p{
     }
 }
 
+@media screen and (max-width: 620px){
+    form input, form textarea{
+        max-width: 400px;
+        min-width: 250px;
+    }
+
+    .contact-left{
+        align-items: center;
+    }
+
+    .contact-left p{
+        font-size: 17px;
+    }
+
+    .copyright{
+        min-width: 370px;
+    }
+}
