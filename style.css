@@ -97,8 +97,7 @@ nav ul li a:hover::after {
 #menu-btn{
     background: rgb(216, 183, 246);
     color:white;
-    border-color: black;
-    border-width: 3px;
+    border: none;
     cursor: pointer;
     padding: 7px 10px;
     border-radius: 15%;
@@ -366,7 +365,7 @@ main p{
     height: auto;
     flex-wrap: wrap;
     margin: 70px 0;
-    gap: 12px;
+    gap: 20px;
 }
 .project{
     border-radius: 10px;
@@ -412,7 +411,9 @@ main p{
 .layer a{
     font-size: 25px;
     background-color: rgb(216, 183, 246);
+    color: rgb(66, 20, 109);
     border-radius: 50%;
+    text-decoration: none;
     line-height: 60px; /* прави текста центриран вертикално */
     margin-top: 20px;
     width: 60px;
@@ -465,7 +466,7 @@ footer .container{
 .social-icons{
     font-size: 30px;
     margin-top: 30px;
-    background-color: rgb(33, 0, 71);
+    color: rgb(33, 0, 71);
 }
 
 .social-icons a{
@@ -628,6 +629,10 @@ form .btn2{
 }
 
 @media screen and (max-width: 620px){
+    nav{
+        padding: 10px 44px;
+    }
+
     form input, form textarea{
         max-width: 400px;
         min-width: 250px;
@@ -643,5 +648,9 @@ form .btn2{
 
     .copyright{
         min-width: 370px;
+    }
+
+    .sub-titles h2{
+        font-size: 25px;
     }
 }
