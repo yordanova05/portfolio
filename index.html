@@ -139,10 +139,11 @@
                         <a href="images/CV Yoanna Yordanova.pdf" class="btn btn2">View CV</a>
                     </div>
                     <div class = "contact-right">
-                        <form>
+                        <form name="contact" method="POST" data-netlify="true">
                             <input class = "text contact-inputs" name = "name" placeholder="Your name" required>
                             <input class = "email contact-inputs" name = "email" placeholder="Your email" required>
                             <textarea name = "Message" class="contact-inputs" rows="6" placeholder="Your message"></textarea>
+                            <input type="hidden" name="form-name" value="contact">
                             <button type = "submit" class="btn btn2">Submit</button>
                         </form>
                     </div>
